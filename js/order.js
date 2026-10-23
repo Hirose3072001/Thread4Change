@@ -4,7 +4,7 @@
 
 const FANPAGE_URL = 'https://www.facebook.com/profile.php?id=61585160090855&locale=vi_VN';
 
-// Chuyển hướng trực tiếp tới Fanpage Facebook khi ấn Order
+// Redirect directly to Facebook Fanpage on Order
 function redirectToFanpage() {
     window.open(FANPAGE_URL, '_blank', 'noopener,noreferrer');
 }

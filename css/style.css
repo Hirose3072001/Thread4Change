@@ -1,0 +1,108 @@
+/* ==========================================================================
+   THREADS FOR CHANGE - Core Stylesheet
+   ========================================================================== */
+
+/* 1. Global Reset & Smooth Scroll */
+html,
+body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    min-height: 100% !important;
+    height: auto !important;
+    scroll-behavior: smooth !important;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overscroll-behavior: auto;
+}
+
+/* 2. Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff8f6;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fd9e78;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ac3323;
+}
+
+/* 3. Keyframe Animations */
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(1deg);
+    }
+}
+
+@keyframes pulseSoft {
+    0%, 100% {
+        opacity: 0.45;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.75;
+        transform: scale(1.06);
+    }
+}
+
+.animate-float-slow {
+    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulseSoft 7s ease-in-out infinite;
+}
+
+/* 4. Visual Accents */
+.tape-accent {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(2px);
+}
+
+/* 5. 3D Coverflow Carousel Stage */
+#deckContainer {
+    perspective: 1000px;
+    touch-action: pan-y pinch-zoom;
+}
+
+.stack-card {
+    will-change: transform, opacity, filter;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* 6. Mobile Drawer Menu */
+#mobileMenuBackdrop {
+    transition: opacity 0.3s ease;
+}
+
+#mobileMenuDrawer {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobileMenuBackdrop.menu-open {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+#mobileMenuDrawer.menu-open {
+    transform: translateX(0) !important;
+}
+
+/* 7. Image Optimization */
+img {
+    image-rendering: auto;
+}
